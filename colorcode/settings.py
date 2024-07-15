@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-b2$4%7v+=yx%qxn2ono(1_hd*tve7$ahjdp#+ii(v6^c9n)%11
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ '8000-shaunadoo97-artistblogp-ub6hfh1w6sh.ws.codeinstitute-ide.net', '.herokuapp.com']
+ALLOWED_HOSTS = [ '8000-shaunadoo97-artistblogp-m5v9ex2ik0o.ws.codeinstitute-ide.net', '.herokuapp.com']
 
 
 # Application definition
@@ -85,6 +85,9 @@ WSGI_APPLICATION = 'colorcode.wsgi.application'
 #    }
 # }
 
+DATABASES = {
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
